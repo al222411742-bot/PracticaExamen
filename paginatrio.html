@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Práctica de Examen</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1 style="color: rgb(246, 247, 248); font-size: 50px; font-style: italic;   text-align: center; font-family: 'Times New Roman', Times, serif;">Mi Pagina Trio</h1>
+        <p>Herramientas interactivas</p>
+    </header>
+
+    <nav>
+        <button class="menu activo" data-seccion="edad">Calculadora</button>
+        <button class="menu" data-seccion="temperatura">Temperaturas</button>
+        <button class="menu" data-seccion="tareas">Tareas</button>
+    </nav>
+
+    <main>
+
+        <section id="edad" class="seccion activa">
+            <h2>Calculadora de edad</h2>
+            <p>Selecciona tu fecha de nacimiento.</p>
+
+            <div class="campos">
+                <label>Día:
+                    <select id="dia">
+                        <option value="">Día</option>
+                    </select>
+                </label>
+
+                <label>Mes:
+                    <select id="mes">
+                        <option value="">Mes</option>
+                    </select>
+                </label>
+
+                <label>Año:
+                    <select id="anio">
+                        <option value="">Año</option>
+                    </select>
+                </label>
+            </div>
+
+            <button id="calcularEdad">Calcular edad</button>
+            <p id="resultadoEdad" class="resultado"></p>
+        </section>
+
+        <section id="temperatura" class="seccion">
+            <h2>Convertidor de temperatura</h2>
+            <p>Convierte entre Celsius, Fahrenheit y Kelvin.</p>
+
+            <input type="number" id="valor" placeholder="Temperatura">
+
+            <select id="origen">
+                <option value="">Unidad de origen</option>
+                <option value="C">Celsius</option>
+                <option value="F">Fahrenheit</option>
+                <option value="K">Kelvin</option>
+            </select>
+
+            <select id="destino">
+                <option value="">Unidad de destino</option>
+                <option value="C">Celsius</option>
+                <option value="F">Fahrenheit</option>
+                <option value="K">Kelvin</option>
+            </select>
+
+            <button id="convertir" disabled>Convertir</button>
+            <p id="resultadoTemperatura" class="resultado"></p>
+        </section>
+
+        <section id="tareas" class="seccion">
+            <h2>Mi lista de tareas</h2>
+            <p>Escribe una tarea y presiona Enter o el botón Agregar.</p>
+
+            <div class="nueva-tarea">
+                <input type="text" id="nuevaTarea"
+                    placeholder="Escribe una tarea">
+                <button id="agregarTarea">Agregar</button>
+            </div>
+
+            <ul id="listaTareas"></ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Práctica de Examen</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

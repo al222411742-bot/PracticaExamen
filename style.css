@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   background: #f2f4f8;
+    color: #03527a;
+}
+
+header {
+    background: #29bbd1;
+   color: white;
+   text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+  margin-bottom: 8px;
+}
+
+nav {
+    display: flex;
+   justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    background: white;
+}
+
+button {
+    background: #c731f9;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #c731f9;
+}
+
+button:disabled {
+    background: #aaaaaa;
+    cursor: not-allowed;
+}
+
+nav button.activo {
+    background: #47ff33;
+}
+
+main {
+    width: 90%;
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+.seccion {
+    display: none;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #dddddd;
+}
+
+.seccion.activa {
+    display: block;
+}
+
+h2 {
+    color: #740b97;
+}
+
+input, select {
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    margin: 5px 3px;
+    max-width: 100%;
+}
+
+.campos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.campos label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.resultado {
+    color: #ec3455;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.nueva-tarea {
+    display: flex;
+    gap: 8px;
+}
+
+.nueva-tarea input {
+    flex: 1;
+    min-width: 0;
+}
+
+#listaTareas {
+    list-style: none;
+    padding: 0;
+}
+
+#listaTareas li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #dddddd;
+    padding: 12px 0;
+}
+
+#listaTareas li span {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+#listaTareas li.completada span {
+    text-decoration: line-through;
+    color: #888888;
+}
+
+.eliminar {
+    background: #d94b59;
+    padding: 8px 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666666;
+}
+
+@media (max-width: 500px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav button {
+        width: 100%;
+    }
+
+    .seccion {
+        padding: 18px;
+    }
+
+    .nueva-tarea {
+        flex-direction: column;
+    }
+
+    .nueva-tarea button {
+        width: 100%;
+    }
+}
